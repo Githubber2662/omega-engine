@@ -7,7 +7,7 @@ const functions = {
         }
         if(n.mag === Infinity)
         {
-            return "Infinite";
+            return "&infin;";
         }
         if(n.lt(0))
         {
