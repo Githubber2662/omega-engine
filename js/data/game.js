@@ -1,6 +1,6 @@
 const game = {
     version: "1.1",
-    timeSaved: Date.now(),
+    timeSaved: performance.now(),
     layers: [],
     highestLayer: 0,
     highestUpdatedLayer: 0,
