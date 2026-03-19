@@ -1,5 +1,5 @@
-let dtOld = Date.now();
-let dtNew = Date.now();
+let dtOld = performance.now();
+let dtNew = performance.now();
 let minimizedLayer = 0;
 let saveTimer = 0;
 let localTimer = 0;
@@ -173,9 +173,9 @@ function simulateGameTime(seconds)
 
 function update()
 {
-    dtNew = Date.now();
+    dtNew = performance.now();
     const dt = Math.max(0, (dtNew - dtOld) / 1000);
-    dtOld = Date.now();
+    dtOld = performance.now();
 
     tickGame(dt);
 
