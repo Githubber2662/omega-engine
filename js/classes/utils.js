@@ -58,7 +58,7 @@ class Utils
         return value.pow(Decimal.max(0, value.div(start).log10().mul(strength)).add(1));
     }
 
-    static createRandomWord(length, seed = Date.now())
+    static createRandomWord(length, seed = performance.now())
     {
         const rand = new Random(seed);
         const vowels = "aeiou";
@@ -73,7 +73,7 @@ class Utils
 
     static getMOTD()
     {
-        const rand = new Random(new Date().getDate());
+        const rand = new Random(performance.now());
         return ADJECTIVES[rand.nextInt(ADJECTIVES.length)] + " " + NOUNS[rand.nextInt(NOUNS.length)];
     }
 
