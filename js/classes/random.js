@@ -16,7 +16,7 @@ class Random
         this.generation = 0;
         if(seed === undefined)
         {
-            this.seed = Date.now();
+            this.seed = performance.now();
         }
         this.n = this.seed;
         for(let i = 0; i < 10; i++) this.next();
