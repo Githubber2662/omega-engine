@@ -181,7 +181,7 @@ const functions = {
     },
     saveGame: function()
     {
-        game.timeSaved = Date.now();
+        game.timeSaved = performance.now();
         try
         {
             localStorage.setItem(mod.primaryName+mod.secondaryName+game.settings.saveInfo, this.getSaveString());
@@ -336,7 +336,7 @@ const functions = {
 
         if(!isImported && game.settings.offlineProgress && loadObj.timeSaved !== undefined)
         {
-            const t = (Date.now() - loadObj.timeSaved) / 1000;
+            const t = (performance.now() - loadObj.timeSaved) / 1000;
             if(t >= 60) //after offline for over 60 seconds
             {
                 document.querySelector("#loading > p").innerHTML = "Applying Offline Progress...";
